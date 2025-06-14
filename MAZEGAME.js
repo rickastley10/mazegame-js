@@ -1,13 +1,10 @@
-<html>
-    <body>
-        <script>
-            console.log('starting MAZEGAME');
-let x = 0
-let y = 0
-let level = 0
-let move = ''
+console.log('starting MAZEGAME');
+let x = 0;
+let y = 0;
+let level = 0;
+let move = '';
 
-room = ' ==W== \n A   *   D \n ==S=='
+room = ' ==W== \n A   *   D \n ==S==';
 
   
 
@@ -30,31 +27,28 @@ function coordinates(){
   }
 }
 function info(){
-    alert(`Current position: x=${x}, y=${y}\nLevel: ${level}\n${room}`)
+    alert(`Current position: x=${x}, y=${y}\nLevel: ${level}\n${room}`);
 }
   
 
 function finish(){
   if (x === 1 && y === -3 && level === 0){
-    alert('LEVEL 0 COMPLETE')
+    alert('LEVEL 0 COMPLETE');
     level = level + 1;
   }
   else if (x === -9 && y === 5 && level === 1){
-    alert('LEVEL 1 COMPLETE')
-    level = level + 1
+    alert('LEVEL 1 COMPLETE');
+    level = level + 1;
   }
   else if (x === -5 && y === -4 && level === 2){
-    alert('LAST LEVEL COMPLETE')
-    level = level + 1
+    alert('LAST LEVEL COMPLETE');
+    level = level + 1;
   }
 }
 while (true){
-  info()
+  info();
 
-  movement()
-  coordinates()
-  finish()
+  movement();
+  coordinates();
+  finish();
 }
-        </script>
-    </body>
-</html>
